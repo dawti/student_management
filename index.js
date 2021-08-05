@@ -6,6 +6,8 @@ const sequelize=new Sequelize('postgres://postgres:1234@localhost:5432/stud_db')
 
 const Teacher = require('./models/teacher.js')(sequelize, Sequelize);
 
+const Fee = require('./models/fee.js')(sequelize, Sequelize);
+
 sequelize.sync({force:true}).then(() => {
     console.log('Drop and Resync with { force: true }');
   });
