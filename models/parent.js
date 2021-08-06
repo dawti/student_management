@@ -1,18 +1,15 @@
+//ARSHEENA parent
 module.exports = (sequelize, Sequelize) => {
-	const Parent = sequelize.define('parent', {
-        father_name: {
+    const Parent = sequelize.define('parent', {
+      fatherName: {
         type: Sequelize.STRING,
-        field: 'father_name' 
+        field: 'father_name'
       },
-      mother_name: {
+      motherName: {
         type: Sequelize.STRING,
-        field: 'mother_name' 
-      },
-    //   mother_name: {
-    //     type: Sequelize.INTEGER
-    // },
+        field: 'mother_name'
+      }
+    });
   
-	});
-	
-	return Parent;
-}
+    return Parent;
+  }
