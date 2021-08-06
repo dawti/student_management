@@ -1,11 +1,11 @@
 /**
  * 
  * Author:Dawtie 
- * Model class for teacher
+ * Model class for class year
  *  
  */
-module.exports = (sequelize, Sequelize) => {
-	const Class = sequelize.define('class', {
+ module.exports = (sequelize, Sequelize) => {
+	const ClassYear = sequelize.define('classyear', {
       name: {
         type: Sequelize.STRING,
        
@@ -21,5 +21,5 @@ module.exports = (sequelize, Sequelize) => {
     
 	});
 	
-	return Class;
+	return ClassYear;
 }
