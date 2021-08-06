@@ -1,7 +1,7 @@
 //arsheena student assignment
 module.exports = (sequelize, Sequelize) => {
 	const StudAssignment = sequelize.define('stud_assign', {
-      assignment: {
+      assignment:{
         type: Sequelize.STRING 
       }
 	});
