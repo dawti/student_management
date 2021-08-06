@@ -35,6 +35,13 @@ const StudAssignment = require('./models/studAssignment.js')(sequelize, Sequeliz
 //
 
 
+//------------------------jagan------------------------
+
+const TimeTable = require('./models/timetable.js')(sequelize, Sequelize);
+const AnswerSheet = require('./models/answersheet.js')(sequelize, Sequelize);
+const PdfTable = require('./models/pdftable.js')(sequelize, Sequelize);
+const QuestionPaper = require('./models/Questionpaper.js')(sequelize, Sequelize);
+const VideoTable = require('./models/videotable.js')(sequelize, Sequelize);
 
 
 sequelize.sync({force:true}).then(() => {
