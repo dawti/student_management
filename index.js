@@ -15,6 +15,10 @@ const ClassFee = require('./models/classFee.js')(sequelize, Sequelize);
 //---------------------------------------------------------------
 const Course = require('./models/course.js')(sequelize, Sequelize);
 
+//------------------------jagan------------------------
+
+const Parent = require('./models/parent.js')(sequelize, Sequelize);
+const Timetable = require('./models/timetable.js')(sequelize, Sequelize);
 
 
 sequelize.sync({force:true}).then(() => {
