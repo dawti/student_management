@@ -6,8 +6,18 @@ const sequelize=new Sequelize('postgres://postgres:1234@localhost:5432/stud_db')
 
 const Class = require('./models/class.js')(sequelize, Sequelize);
 const Teacher = require('./models/teacher.js')(sequelize, Sequelize);
-const Course = require('./models/course.js')(sequelize, Sequelize);
+
+
+//----------------------------corrine --------------------------
+
 const Fee = require('./models/fee.js')(sequelize, Sequelize);
+const StudFee = require('./models/studFee.js')(sequelize, Sequelize);
+const ClassFee = require('./models/classFee.js')(sequelize, Sequelize);
+
+//---------------------------------------------------------------
+const Course = require('./models/course.js')(sequelize, Sequelize);
+
+
 
 
 sequelize.sync({force:true}).then(() => {
