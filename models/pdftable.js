@@ -1,5 +1,6 @@
+//Jagan pdf model
 module.exports = (sequelize, Sequelize) => {
-	const Pdftable = sequelize.define('pdftable', {
+	const PdfTable = sequelize.define('pdftable', {
     
         pdf: {
       type: Sequelize.STRING
@@ -7,5 +8,5 @@ module.exports = (sequelize, Sequelize) => {
 	 
 	});
 	
-	return Pdftable;
+	return PdfTable;
 }

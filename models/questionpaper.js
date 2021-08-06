@@ -1,14 +1,18 @@
+//Jagan Question paper
+
 module.exports = (sequelize, Sequelize) => {
-	const Questionpaper = sequelize.define('questionpaper', {
+	const QuestionPaper = sequelize.define('questionpaper', {
     
-        qstpaperpdf: {
-      type: Sequelize.STRING
+        qstPaperPdf: {
+      type: Sequelize.STRING,
+      field: 'question_paper_pdf'
     },
-	  datetime: {
-		  type: Sequelize.STRING
+	  dateTime: {
+		  type: Sequelize.STRING,
+          field: 'date_time'
 	  },
 	 
 	});
 	
-	return Questionpaper;
+	return QuestionPaper;
 }

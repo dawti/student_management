@@ -1,5 +1,7 @@
+//Jagan Time table
+
 module.exports = (sequelize, Sequelize) => {
-	const Timetable = sequelize.define('timetable', {
+	const TimeTable = sequelize.define('timetable', {
     
     day: {
       type: Sequelize.STRING
@@ -12,5 +14,5 @@ module.exports = (sequelize, Sequelize) => {
 	  }
 	});
 	
-	return Timetable;
+	return TimeTable;
 }

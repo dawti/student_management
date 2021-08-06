@@ -26,11 +26,11 @@ const Guardian = require('./models/guardian.js')(sequelize, Sequelize);
 
 //------------------------jagan------------------------
 
-const Timetable = require('./models/timetable.js')(sequelize, Sequelize);
-const Answersheet = require('./models/answersheet.js')(sequelize, Sequelize);
-const Pdftable = require('./models/pdftable.js')(sequelize, Sequelize);
-const Questionpaper = require('./models/Questionpaper.js')(sequelize, Sequelize);
-const Videotable = require('./models/videotable.js')(sequelize, Sequelize);
+const TimeTable = require('./models/timetable.js')(sequelize, Sequelize);
+const AnswerSheet = require('./models/answersheet.js')(sequelize, Sequelize);
+const PdfTable = require('./models/pdftable.js')(sequelize, Sequelize);
+const QuestionPaper = require('./models/Questionpaper.js')(sequelize, Sequelize);
+const VideoTable = require('./models/videotable.js')(sequelize, Sequelize);
 
 
 sequelize.sync({force:true}).then(() => {

@@ -1,11 +1,13 @@
+//Jagan Answer Sheet
 module.exports = (sequelize, Sequelize) => {
-	const Answersheet = sequelize.define('answersheet', {
+	const AnswerSheet = sequelize.define('answersheet', {
     
-        anssheet: {
-      type: Sequelize.STRING
+        ansSheet: {
+      type: Sequelize.STRING,
+      field: 'answer_sheet'
     }
 	 
 	});
 	
-	return Answersheet;
+	return AnswerSheet;
 }

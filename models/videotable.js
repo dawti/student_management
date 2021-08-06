@@ -1,5 +1,7 @@
+//Jagan Video record
+
 module.exports = (sequelize, Sequelize) => {
-	const Videotable = sequelize.define('videotable', {
+	const VideoTable = sequelize.define('videotable', {
     
     video: {
       type: Sequelize.STRING
@@ -7,5 +9,5 @@ module.exports = (sequelize, Sequelize) => {
 	
 	});
 	
-	return Videotable;
+	return VideoTable;
 }
