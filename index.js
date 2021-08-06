@@ -7,6 +7,10 @@ const sequelize=new Sequelize('postgres://postgres:1234@localhost:5432/stud_db')
 const Class = require('./models/class.js')(sequelize, Sequelize);
 const Teacher = require('./models/teacher.js')(sequelize, Sequelize);
 const Login=require('./models/login.js')(sequelize,Sequelize);
+const ClassYear=require('./models/classyear.js')(sequelize,Sequelize);
+const ExamType=require('./models/examtype.js')(sequelize,Sequelize);
+const Mark=require('./models/mark.js')(sequelize,Sequelize);
+const Audio=require('./models/audio.js')(sequelize,Sequelize);
 
 //----------------------------corrine --------------------------
 
