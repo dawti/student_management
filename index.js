@@ -15,7 +15,13 @@ const StudFee = require('./models/studFee.js')(sequelize, Sequelize);
 const ClassFee = require('./models/classFee.js')(sequelize, Sequelize);
 
 //---------------------------------------------------------------
+//arsheena
 const Course = require('./models/course.js')(sequelize, Sequelize);
+const School = require('./models/school.js')(sequelize, Sequelize);
+const Parent = require('./models/parent.js')(sequelize, Sequelize);
+const Studreg = require('./models/studreg.js')(sequelize, Sequelize);
+const Guardian = require('./models/guardian.js')(sequelize, Sequelize);
+//
 
 
 
