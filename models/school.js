@@ -1,33 +1,88 @@
 //ARSHEENA school registration
-module.exports = (sequelize, Sequelize) => {
-    const School = sequelize.define('school', {
-        name: {
-            type: Sequelize.STRING,
-            field: 'school_name'
-        },
+// module.exports = (sequelize, Sequelize) => {
+//     const School = sequelize.define('school', {
+//         name: {
+//             type: Sequelize.STRING,
+//             field: 'school_name'
+//         },
 
-        regnum: {
-            type: Sequelize.INTEGER,
-            field: 'register_number'
-        },
+//         regnum: {
+//             type: Sequelize.INTEGER,
+//             field: 'register_number'
+//         },
 
-        email: {
-            type: Sequelize.STRING
-        },
+//         email: {
+//             type: Sequelize.STRING
+//         },
 
-        address: {
-            type: Sequelize.STRING
-        },
+//         address: {
+//             type: Sequelize.STRING
+//         },
 
-        mobile: {
-            type: Sequelize.INTEGER
-        },
+//         mobile: {
+//             type: Sequelize.INTEGER
+//         },
 
-        logo: {
-            type: Sequelize.STRING
-        },
+//         logo: {
+//             type: Sequelize.STRING
+//         },
         
-    });
+//     });
 
-    return School;
-}
+//     return School;
+// }
+
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class School extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    }
+  };
+  School.init({
+    name: {
+                    type: DataTypes.STRING,
+                    field: 'school_name'
+                },
+        
+                regnum: {
+                    type: DataTypes.INTEGER,
+                    field: 'register_number'
+                },
+        
+                email: {
+                    type: DataTypes.STRING
+                },
+        
+                address: {
+                    type: DataTypes.STRING
+                },
+        
+                mobile: {
+                    type: DataTypes.INTEGER
+                },
+        
+                logo: {
+                    type: DataTypes.STRING
+                }
+  }, {
+    sequelize,
+    modelName: 'school',
+  });
+  School.associate = (models) => {
+    School.hasMany(models.payment);
+    School.belongsTo(models.login);
+    School.hasMany(models.studreg);
+    School.hasMany(models.teacher);
+
+  }
+  return School;
+};
