@@ -4,6 +4,8 @@
  */
  const model = require("../models");
  const Teacher = model.db.teacher;
+ const Login=model.db.login;
+ 
  
  // Add or Register a new teacher
  exports.create = (req, res) => { 
@@ -16,7 +18,7 @@
      experience:req.body.experience,
      gender:req.body.gender,
      mobile:req.body.mobile,
-     
+     login_fk:req.body.login
    };
  
    // Save Teacher in the database
@@ -65,7 +67,6 @@
  // Update a teacher by the id in the request
  exports.update = (req, res) => {
    const id = req.params.id;
- 
    Teacher.update(req.body, {
      where: { id: id }
    })
