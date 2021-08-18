@@ -1,6 +1,12 @@
 const express=require('express');
+
 const timetable=require('./timetable');
+const classmaster=require('./classmaster');
+const payment=require('./payment');
+const classfee=require('./classfee');
 const teacher=require('./teacher');
+const login=require('./login');
+const studentmaster=require('./studentfeemaster');
 const answersheet = require('./answersheet');
 const classes = require('./class');
 const classyear = require('./classyear');
@@ -18,8 +24,28 @@ const defaultRoutes=[{
     route:timetable
 },
 {
+    path:'/payment',
+    route:payment
+},
+{
+    path:'/classfeemaster',
+    route:classmaster
+},
+{
+    path:'/classfee',
+    route:classfee
+},
+{
     path:'/teacher',
     route:teacher
+},
+{
+    path:'/login',
+    route:login
+},
+{
+    path:'/studfeemaster',
+    route:studentmaster
 },
 {
     path:'/answersheet',
@@ -56,9 +82,11 @@ const defaultRoutes=[{
 {
     path:'/videotable',
     route:videotable
-}
+}];
+    
 
-];
+
+
 
 defaultRoutes.forEach((route)=>{
     router.use(route.path,route.route);

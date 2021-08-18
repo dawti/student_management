@@ -1,7 +1,7 @@
 const express=require('express');
 const app=express();
 const port=8081;
-const Sequelize=require('sequelize');
+//const Sequelize=require('sequelize');
 const model = require('./models');
 app.use(express.urlencoded({ extended: true })); 
 app.use(express.json());
