@@ -1,12 +1,13 @@
 const express=require('express');
 const app=express();
 const port=8081;
-const Sequelize=require('sequelize');
+//const Sequelize=require('sequelize');
 const model = require('./models');
-const routes = require ('./routes');
-app.use('/api',routes);
 app.use(express.urlencoded({ extended: true })); 
 app.use(express.json());
+const routes = require ('./routes');
+app.use('/api',routes);
+
 // const sequelize=new Sequelize('postgres://postgres:1234@localhost:5432/stud_db');
 
 // //--------------------dawtie--------------------------------------------
